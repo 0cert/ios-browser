@@ -3,7 +3,7 @@ import Security
 import CryptoKit
 import Combine
 
-// User's complete IBC identity
+// User's complete 0Cert identity
 struct IBCIdentity: Codable {
     let email: String
     let userSecret: String           // ECDH private key — never leaves device

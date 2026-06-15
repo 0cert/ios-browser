@@ -14,7 +14,7 @@ struct DashboardView: View {
                         IdentityCard(identity: identity, copiedField: $copiedField)
                     }
                 } header: {
-                    Text("Your IBC Identity")
+                    Text("Your 0Cert identity")
                 }
 
                 // ── Key Status ────────────────────────────────
@@ -49,7 +49,7 @@ struct DashboardView: View {
                 // ── Verified Sites ────────────────────────────
                 Section {
                     if keyVault.verifiedSites.isEmpty {
-                        Text("No IBC sites visited yet")
+                        Text("No 0Cert sites visited yet")
                             .foregroundStyle(.secondary)
                             .font(.system(size: 14))
                     } else {
@@ -72,7 +72,7 @@ struct DashboardView: View {
                         }
                     }
                 } header: {
-                    Text("IBC Verified Sites")
+                    Text("0Cert Verified Sites")
                 }
 
                 // ── About ─────────────────────────────────────
@@ -90,10 +90,10 @@ struct DashboardView: View {
                     AboutRow(
                         icon: "globe.badge.chevron.backward",
                         title: "Works on all sites",
-                        detail: "Non-IBC sites use standard SSL. IBC sites get an extra verified encryption layer."
+                        detail: "Non-0Cert sites use standard SSL. 0Cert sites get an extra verified encryption layer."
                     )
                 } header: {
-                    Text("About IBC Security")
+                    Text("About 0Cert")
                 }
 
                 // ── Danger Zone ───────────────────────────────
@@ -101,7 +101,7 @@ struct DashboardView: View {
                     Button(role: .destructive) {
                         keyVault.clearAll()
                     } label: {
-                        Label("Reset IBC Identity", systemImage: "trash")
+                        Label("Reset 0Cert identity", systemImage: "trash")
                     }
                 } header: {
                     Text("Danger Zone")
@@ -128,7 +128,7 @@ struct IdentityCard: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(identity.email)
                         .font(.system(size: 16, weight: .medium))
-                    Text(identity.isComplete ? "IBC identity active" : "Setup incomplete")
+                    Text(identity.isComplete ? "0Cert identity active" : "Setup incomplete")
                         .font(.system(size: 13))
                         .foregroundStyle(identity.isComplete ? .green : .secondary)
                 }

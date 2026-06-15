@@ -32,8 +32,8 @@ enum IBCTrustLevel {
 
     var label: String {
         switch self {
-        case .ibcVerified:  return "IBC Verified"
-        case .ibcDetected:  return "IBC Detected"
+        case .ibcVerified:  return "0Cert Verified"
+        case .ibcDetected:  return "0Cert Detected"
         case .standardSSL:  return "Standard SSL"
         case .unknown:      return "Checking..."
         case .failed:       return "Check Failed"
@@ -96,7 +96,7 @@ class IBCEngine: ObservableObject {
                 trustLevel: .standardSSL,
                 kgcURL: nil,
                 checkedAt: Date(),
-                message: "No IBC record found in DNS"
+                message: "No 0Cert record found in DNS"
             )
         }
 

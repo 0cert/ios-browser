@@ -161,7 +161,7 @@ struct WelcomeStep: View {
                     .font(.system(size: 32, weight: .bold))
                     .multilineTextAlignment(.center)
 
-                Text("IBC Browser uses next-generation identity-based cryptography. Your email is your key. No certificates. No renewals. Even we can't read your data.")
+                Text("0 Browser uses next-generation identity-based cryptography. Your email is your key. No certificates. No renewals. Even we can't read your data.")
                     .font(.system(size: 16))
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
@@ -179,7 +179,7 @@ struct IdentityStep: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             VStack(alignment: .leading, spacing: 8) {
-                Text("Set up your\nIBC identity")
+                Text("Set up your\n0Cert identity")
                     .font(.system(size: 32, weight: .bold))
                 Text("Your email becomes your cryptographic identity. We'll generate your keys right here on your device.")
                     .font(.system(size: 15))
@@ -264,7 +264,7 @@ struct KeygenStep: View {
                     .font(.system(size: 32, weight: .bold))
 
                 if let identity = identity {
-                    Text("IBC identity created for\n**\(identity.email)**")
+                    Text("0Cert identity created for\n**\(identity.email)**")
                         .font(.system(size: 16))
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.center)
@@ -273,7 +273,7 @@ struct KeygenStep: View {
 
             VStack(spacing: 12) {
                 FeatureRow(icon: "key.fill", text: "Your private key lives in your Keychain")
-                FeatureRow(icon: "lock.shield", text: "IBC sites get verified encryption")
+                FeatureRow(icon: "lock.shield", text: "0Cert sites get verified encryption")
                 FeatureRow(icon: "globe", text: "All other sites work normally")
             }
         }

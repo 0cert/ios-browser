@@ -1,6 +1,6 @@
 //
 //  RegisteredSite.swift
-//  IBCBrowser
+//  0 Browser
 //
 //  Created by Dmitry Ulyanov on 15.06.2026.
 //
